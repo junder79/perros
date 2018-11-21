@@ -1,0 +1,31 @@
+{% extends 'perris/base.html' %}
+{% load staticfiles %}
+{% block content %}
+ <div class="container" >
+<div class="row fila-eliminar">
+	
+		 	 <form method="POST" >
+      {% csrf_token %}
+     
+     
+
+      <div class="card" style="width: 40rem;">
+      	<div class="card-header">
+   <h3>¿Desea Eliminar el siguiente post ? {{perro.nombre_perro}}</h3>
+  </div>
+  {% if perro.fotografia_perro %}
+                <img  src="{{perro.fotografia_perro.url}}" class="card-img" >
+            {% endif %}
+  <div class="card-body">
+    <p class="card-text text-truncate">{{perro.descripcion}}</p>
+  </div>
+  <button class="btn btn-danger" type="submit">Si</button>
+      <a class="btn btn-dark"  href="{% url 'adm.inicio'%}">Cancelar</a>
+</div>
+    
+
+  </form>
+
+</div>
+ </div>
+{% endblock %}
