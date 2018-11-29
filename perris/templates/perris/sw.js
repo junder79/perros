@@ -1,12 +1,8 @@
 ;
 //asignar un nombre y versión al cache
-const CACHE_NAME = 'PWA',
+const CACHE_NAME = 'PWA2',
   urlsToCache = [
     '/',
-    '/static/js/Regionycomuna.js',
-    '/static/css/estilos.css',
-    '/static/css/manifest.json',
-    '/static/img/correo.png',
 
   ]
 

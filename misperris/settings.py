@@ -15,20 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'perris/static/js', 'sw.js')
-
-PWA_APP_NAME = 'Mis Perris BETA'
-PWA_APP_DESCRIPTION = "Mis Perris BETA "
-PWA_APP_THEME_COLOR = '#0A0302'
-PWA_APP_BACKGROUND_COLOR = '#ffffff'
-PWA_APP_DISPLAY = 'standalone'
-PWA_APP_START_URL = '/'
-PWA_APP_ICONS = [
-    {
-        'src': 'perris/static/img/perro.png',
-        'sizes': '160x160'
-    }
-]
 
 
 # Quick-start development settings - unsuitable for production
@@ -40,7 +26,7 @@ SECRET_KEY = 's6(8+0vi@h96dfiu_4#@1)y!qmqbsmxzr=(ynwd8#h)gkzi42%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['misperrisdw.pythonanywhere.com']
 
 
 # Application definition
@@ -55,8 +41,7 @@ INSTALLED_APPS = [
     'perris',
     'usuario',
     'coverage',
-    'social_django', 
-    'pwa',
+    'social_django',
     'rest_framework',
 ]
 
@@ -70,9 +55,9 @@ REST_FRAMEWORK = {
 
 
 AUTHENTICATION_BACKENDS=(
- 'social_core.backends.open_id.OpenIdAuth',  
- 'social_core.backends.google.GoogleOpenId',  
- 'social_core.backends.google.GoogleOAuth2',  
+ 'social_core.backends.open_id.OpenIdAuth',
+ 'social_core.backends.google.GoogleOpenId',
+ 'social_core.backends.google.GoogleOAuth2',
  'django.contrib.auth.backends.ModelBackend',
 
 )
@@ -101,8 +86,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'social_django.context_processors.backends', 
-                'social_django.context_processors.login_redirect', 
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
 
             ],
         },
@@ -122,7 +107,7 @@ DATABASES = {
     }
 }
 
-# Autenticacion con Google 
+# Autenticacion con Google
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='520008607250-7f486hokst67p49bnfan330p2amhnq4r.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET='YIuzftoOJW8M0CmWV_OaHdQm'
@@ -168,7 +153,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-#para que acepte Django subir archivos 
+#para que acepte Django subir archivos
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

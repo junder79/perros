@@ -15,7 +15,7 @@
 			 		 El nombre de usuario que ingresaste no coincide con ninguna cuenta. Regístrate para crear una cuenta.
 				</div>
 			{% endif %}
-			
+
 		   <form method="POST" class="needs-validation" novalidate>
 						{% csrf_token %}
 						<div class="input-group" >
@@ -36,17 +36,18 @@
 						       Completado
 						      </div>
 						</div>
+
 						<div class="form-group btn-ingresar" >
-							<a href="{% url 'password_reset' %}" class="btn btn-danger">Olvide mi contraseña</a>
-							<input type="submit" value="Ingresar"  class="btn-hover color-1 " name="">
+                            <a href="{% url 'password_reset' %}" class="btn btn-danger">Olvidé mi contraseña</a>
+							<input type="submit" value="Ingresar"  class="btn-hover color-1" name="">
 						</div>
 					</form>
-					<a href="{%  url 'social:begin' 'google-oauth2' %}"><i class="fab fa-google"></i> Google</a>
-		    
+					<a class="btn btn-block btn-social btn-google" href="{%  url 'social:begin' 'google-oauth2' %}"><i class="fab fa-google"></i> Ingresar con Google</a>
+
   </div>
 
 
-  
+
 </div>
 		</div>
 	</div>

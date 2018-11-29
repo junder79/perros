@@ -33,7 +33,7 @@ var RegionesYcomunas = {
 			"comunas": ["Talca", "ConsVtución", "Curepto", "Empedrado", "Maule", "Pelarco", "Pencahue", "Río Claro", "San Clemente", "San Rafael", "Cauquenes", "Chanco", "Pelluhue", "Curicó", "Hualañé", "Licantén", "Molina", "Rauco", "Romeral", "Sagrada Familia", "Teno", "Vichuquén", "Linares", "Colbún", "Longaví", "Parral", "ReVro", "San Javier", "Villa Alegre", "Yerbas Buenas"]
 	},
 		{
-			"NombreRegion": "Región del Ñuble",
+			"NombreRegion": "Región de Ñuble",
 			"comunas": ["Cobquecura", "Coelemu", "Treguaco", "Bulnes", "Chillán", "El Carmen", "San Ignacio", "Coihueco", "Ñiquén", "San Carlos", "San Nicolás"]
 	},
 		{

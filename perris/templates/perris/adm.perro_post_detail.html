@@ -3,9 +3,9 @@
 {% block content %}
     <div class="container">
         <h1></h1>
-            
+
             <div class="card mb-3">
-			 
+
 			  {% if perro.fotografia_perro %}
                <img  src="{{perro.fotografia_perro.url}}" class="img-responsive card-img-top animated fadeIn" >
             {% endif %}
@@ -15,11 +15,11 @@
 			    <!--EDITADO-SE ELIMINÓ EL ATRIBUTO PUBLISHED_DATE-->
 			    <!-- <p class="card-text"><small class="text-muted">Publicado : {{perro.published_date }}</small></p> -->
 			     <div class="animated fadeInRight">
-			     	<div class="btn-group " role="group" aria-label="Basic example">
-		              <button class="btn btn btn-outline-success ">Estado : {{perro.estado}}</button> 
+			     	<!--<div class="btn-group " role="group" aria-label="Basic example">-->
+		              <button class="btn btn btn-outline-success ">Estado : {{perro.estado}}</button>
 		              <button class="btn btn-primary" > <i class="fas fa-dog"></i> Raza : {{perro.raza_predominante}}</button>
-		              <a class="btn btn btn-info" href="{% url 'login' %}">Adoptar</a> 
-          		  </div>  
+		              <a class="btn btn btn-info" href="{% url 'login' %}">Adoptar</a>
+          		  <!--</div>  -->
 			    <a href="{% url 'perros_disponibles' %}" class="btn btn-secondary " >Volver</a>
 			     </div>
 			  </div>
