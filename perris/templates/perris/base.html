@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-{% load pwa %}
+
 <html>
 <head>
-   {% progressive_web_app_meta %}
-	<title></title>
+	<title>Mis Perris</title>
+	  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Mis Perris , una asociación de adopción y rescate de animales">
+
+  <meta name="theme-color" content="#89D3B8">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="shortcut icon" type="image/png" href="https://avatars.mds.yandex.net/get-pdb/225396/4e13f747-ab9a-459b-9295-6b598c6e3b96/orig">
+  <link rel="apple-touch-icon" href="https://avatars.mds.yandex.net/get-pdb/225396/4e13f747-ab9a-459b-9295-6b598c6e3b96/orig">
+  <link rel="apple-touch-startup-image" href="https://avatars.mds.yandex.net/get-pdb/225396/4e13f747-ab9a-459b-9295-6b598c6e3b96/orig">
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>	
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <!--CSS STATICO-->
+ <link rel="manifest" href="{% static 'css/manifest.json' %}">
 <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
-
+<link rel="stylesheet" href="{% static 'css/bootstrap-social.css' %}">
+<script >
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('{% url 'sw.js' %}')
+    .then(reg => console.log('Registro de SW exitoso', reg))
+    .catch(err => console.warn('Error al tratar de registrar el sw', err))
+}
+</script>
 
 <!--Fonts ESTÁTICO-->
 <link rel="stylesheet" type="text/css" href="{% static 'fonts/style.css' %}">
@@ -51,24 +73,24 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
 
-      
+
     </ul>
     <li class="form-inline my-2 my-lg-0">
-       <a class="nav-link text-white " href="/">Inicio<span class="sr-only">(current)</span></a>
+       <a class="nav-link text-white " href="{% url 'inicio' %}">Inicio<span class="sr-only">(current)</span></a>
       </li>
 
       <li class=" form-inline my-2 my-lg-0">
         <a class="nav-link text-white" href="{% url 'perros_disponibles' %}">Perros Disponibles</a>
-       
+
       </li>
       <li class="form-inline my-2 my-lg-0">
         {% if user.is_authenticated %}
          {% if user.username == "admin" %}
           <a class="nav-link text-white" href="{% url 'adm.inicio' %}">Administrar</a>
         {% else  %}
-          
+
          {% endif %}
-       
+
         {% endif %}
       </li>
     <li class=" form-inline my-2 my-lg-0">
@@ -79,7 +101,7 @@
          <a class="nav-link text-white " href="{% url 'registrar' %}"><i class="fas fa-sign-out-alt"></i> Registrar</a>
       {% endif %}
       </li>
-    
+
 
   </div>
 
@@ -102,8 +124,8 @@
                        maxDate : "2000-12-22"
                    });
                });
-           </script>     
-     
+           </script>
+
     </body>
 
 </html>

@@ -4,7 +4,7 @@
 <div class="container">
   <div class="card card-register animated fadeIn ">
   <div class="card-header titulo-login  ">
-   <h1 class="card-title animated flipInY">Registrate</h1>
+   <h1 class="card-title animated flipInY">Regístrate</h1>
   </div>
   <div class="card-body">
      <form method="POST" class="needs-validation" novalidate >
@@ -32,12 +32,12 @@
      </div>
        </div>
         </div>
- 
+
         <div class="row">
           <div class="col-12 col-mb-6 col-lg-6">
             <div class="form-group" >
          <label for="email"></label>
-           <input type="email" class="form-control" id="validationCustom03" placeholder="Ingrese Email"  name="email"  required>
+           <input type="email" class="form-control cmb-email" id="validationCustom03" placeholder="Ingrese Email"  name="email"  required>
            <div class="valid-feedback" >
              Completado
            </div>
@@ -46,36 +46,36 @@
           <div class="col-12 col-mb-6 col-lg-6">
             <div class="form-group" >
          <label for="telefono"></label>
-           <input type="text" class="form-control" id="validationCustom04" placeholder="Teléfono"  name="telefono" required="required">
+           <input type="text" class="form-control txt-telefono" id="validationCustom04" placeholder="Teléfono"  name="telefono" required="required">
            <div class="valid-feedback" >
              Completado
            </div>
      </div>
           </div>
         </div>
- 
-     
+
+
         <div class="row">
           <div class="col-12 col-mb-6 col-lg-6">
-            
+
          <select class="form-control" id="regiones" name="region"><optgroup label="This is a group"><option value="12" selected>This is item 1</option></optgroup></select>
           </div>
           <div class="col-12 col-mb-6 col-lg-6">
            <select class="form-control" id="comunas" name="comuna"><optgroup label="This is a group"><option value="12" selected>This is item 1</option></optgroup></select>
           </div>
         </div>
-     
 
-         
+
+
  <div class="row casa-fecha">
    <div class="col-12 col-mb-6 col-lg-6">
-     
-     <div class="form-group" >
+
+     <div class="form-group cmb-vivienda" >
          <label for="tipovivienda">TipoVivienda</label>
          <section class="input-field col s12">
-         <select id="tipovivienda" name="tipovivienda"> 
+         <select id="tipovivienda" name="tipovivienda">
             <option>Casa con patio grande</option>
-            <option>Casa con patio pequeño</option> 
+            <option>Casa con patio pequeño</option>
             <option>Casa sin patio</option>
             <option>Departamento</option>
          </select>
@@ -89,8 +89,8 @@
      <label>Fecha de Nacimiento : {{form.fecha}}</label>
    </div>
  </div>
-     
-    
+
+
     <div class="row">
       <div class="col-12 col-mb-6 col-lg-6">
         <div class="input-group" >
@@ -102,7 +102,7 @@
            Completado
           </div>
     </div>
- 
+
       </div>
      <div class="col-12 col-mb-6 col-lg-6">
        <div class="input-group" >
@@ -115,16 +115,16 @@
            </div>
      </div>
      </div>
- 
+
     </div>
-    
+
 
      <div class="form-group">
         <input type="submit" value="Registrarse"   class="btn-hover color-1" name="Registrarse">
         <a  class="btn btn-info text-white" href="{% url 'login' %}">Cancelar</a>
       </div>
  </form>
-    
+
   </div>
 </div>
 </div>

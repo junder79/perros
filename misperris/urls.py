@@ -28,7 +28,7 @@ urlpatterns = [
          auth_views.PasswordResetView.as_view(
              template_name='registration/password_reset.html'
          ),
-         name='password_reset'), 
+         name='password_reset'),
     path('password-reset/done',
          auth_views.PasswordResetDoneView.as_view(
              template_name='registration/password_reset_don.html'
@@ -43,12 +43,10 @@ urlpatterns = [
          auth_views.PasswordResetCompleteView.as_view(
              template_name='registration/password_reset_completo.html'
          ),
-         name='password_reset_complete'),  
+         name='password_reset_complete'),
     #Importamos las URL de el directorio USUARIO
-    path('usuario/', include('usuario.urls')), 
+    path('usuario/', include('usuario.urls')),
 
-    #PWA
-    path('', include('pwa.urls')), 
-]   
+]
 
 urlpatterns +=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

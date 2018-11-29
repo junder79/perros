@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block content %}
 <div class="">
-	
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -10,7 +10,7 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
    <div class="carousel-inner">
-  	{% for perro in perros %} 
+  	{% for perro in perros %}
     <div {% if forloop.first %} class="carousel-item active" {% else %} class="carousel-item" {% endif %}>
        <img  src="{{perro.fotografia_perro.url}}" class="img-responsive card-img-top" >
 
@@ -19,7 +19,7 @@
 		    <button href="" class=" btn-hover color-1">ESTADO : {{perro.estado|upper}}</button>
 		  </div>
     </div>
-   
+
      {% endfor %}
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -57,7 +57,7 @@
 			<p class="subtitulo-crowfunding">FINANCIAMIENTO</p>
 			<hr class="linea-crowfunding" >
 			<p class="descripcion-crowfunding">Sigue nuestras redes sociales para informarte acerca de las diversas campañas y actividades que realizamos para obtener financiamiento para seguir ayudando.</p>
-			
+
 			<a class="boton-campaña hvr-grow" href="#"><button ><strong><p>CAMPAÑAS</p></strong></button></a>
 		</section>
 	</section>
